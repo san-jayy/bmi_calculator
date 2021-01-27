@@ -16,8 +16,74 @@ class _InputPageState extends State<InputPage> {
           style: TextStyle(fontSize: 18),
         ),
       ),
-      body: Center(
-        child: Text('Body Text'),
+      // body: Container(
+      //   height: 200.0,
+      //   width: 170.0,
+      //   margin: EdgeInsets.all(12),
+      //   decoration: BoxDecoration(
+      //       color: Color(0xFF1D1E33), borderRadius: BorderRadius.circular(5)),
+      // ),
+      body: Column(
+        children: [
+          Expanded(
+            child: Row(
+              children: [
+                Container(
+                  height: 200.0,
+                  width: 170.0,
+                  margin: EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                      color: Color(0xFF1D1E33),
+                      borderRadius: BorderRadius.circular(5)),
+                ),
+                Container(
+                  height: 200.0,
+                  width: 170.0,
+                  margin: EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                      color: Color(0xFF1D1E33),
+                      borderRadius: BorderRadius.circular(5)),
+                ),
+              ],
+            ),
+          ),
+          Row(
+            children: [
+              Expanded(
+                child: Container(
+                  height: 200.0,
+                  // width: 170.0,
+                  margin: EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                      color: Color(0xFF1D1E33),
+                      borderRadius: BorderRadius.circular(5)),
+                ),
+              )
+            ],
+          ),
+          Expanded(
+            child: Row(
+              children: [
+                Container(
+                  height: 200.0,
+                  width: 170.0,
+                  margin: EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                      color: Color(0xFF1D1E33),
+                      borderRadius: BorderRadius.circular(5)),
+                ),
+                Container(
+                  height: 200.0,
+                  width: 170.0,
+                  margin: EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                      color: Color(0xFF1D1E33),
+                      borderRadius: BorderRadius.circular(5)),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
