@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'constants.dart';
 
 // topcard- the top two containers..
 class Topcard extends StatelessWidget {
-  Topcard({this.icon, this.gender});
+  Topcard({this.icon, this.label});
   final IconData icon;
-  final String gender;
+  final String label;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -19,11 +20,8 @@ class Topcard extends StatelessWidget {
           height: 20,
         ),
         Text(
-          gender,
-          style: TextStyle(
-              fontSize: 21.0,
-              color: Color(0xFF303346),
-              fontWeight: FontWeight.bold),
+          label,
+          style: klabeltextstyle,
         )
       ],
     );
