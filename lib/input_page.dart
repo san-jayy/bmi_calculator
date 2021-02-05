@@ -8,6 +8,7 @@ import 'constants.dart';
 import 'resultpage.dart';
 import 'Bottombutton.dart';
 import 'roundbuttons.dart';
+import 'bmi_brain.dart';
 
 enum Gender { male, female }
 double height = 5;
@@ -215,8 +216,19 @@ class _InputPageState extends State<InputPage> {
           BottomButton(
             buttoblabel: 'CALCULATE',
             ontap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => ResultPage()));
+              CalculatorBrain calculatorBrain =
+                  CalculatorBrain(height: height.toInt(), weight: weight);
+
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ResultPage(
+                    bmiresult: calculatorBrain.calculatebmi(),
+                    resulttext: calculatorBrain.getresult(),
+                    interpretation: calculatorBrain.interpretation(),
+                  ),
+                ),
+              );
             },
           )
         ],
