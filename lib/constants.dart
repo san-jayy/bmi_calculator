@@ -11,5 +11,5 @@ const klabeltextstyle = TextStyle(
 const knumberstyle = TextStyle(
     color: kbottomcontainercolor, fontSize: 55, fontWeight: FontWeight.w900);
 
-const kresulttextstyle =
-    TextStyle(color: Colors.green, fontSize: 25.0, fontWeight: FontWeight.bold);
+const kresulttextstyle = TextStyle(
+    color: Colors.pinkAccent, fontSize: 25.0, fontWeight: FontWeight.bold);
