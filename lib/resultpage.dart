@@ -1,10 +1,13 @@
 import 'package:bmi_calculator/Reusablecard.dart';
 import 'package:bmi_calculator/constants.dart';
 import 'package:flutter/material.dart';
-import 'input_page.dart';
 import 'Bottombutton.dart';
 
 class ResultPage extends StatelessWidget {
+  ResultPage({this.bmiresult, this.resulttext, this.interpretation});
+  final bmiresult;
+  final resulttext;
+  final interpretation;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,17 +37,17 @@ class ResultPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        'Normal',
+                        resulttext.toString().toUpperCase(),
                         style: kresulttextstyle,
                       ),
                       Text(
-                        '30.0',
+                        bmiresult,
                         style: TextStyle(
                             fontSize: 99.0,
                             fontWeight: FontWeight.bold,
                             color: kbottomcontainercolor),
                       ),
-                      Text('some random messange related to bmi calculator',
+                      Text(interpretation,
                           style: TextStyle(
                               color: kbottomcontainercolor, fontSize: 26),
                           textAlign: TextAlign.center)
